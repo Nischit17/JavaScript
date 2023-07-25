@@ -1,4 +1,6 @@
-// Declare variables called 'country', 'continent' and 'population' and assign their values accordingly to our own country (population in millions) and log their values to the console.
+// 1) Declare variables called 'country', 'continent' and 'population' and assign their values according to your own country (population in millions) 
+// 2) Log their values to the console
+
 
 let country = 'India';
 let continent = 'Asia';
