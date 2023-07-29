@@ -126,9 +126,9 @@ console.log(yearsUntilRetirement(1950, 'Mike'));
 
 'use strict';
 
-const friend1 = 'Likith';
-const friend2 = 'Sharad';
-const friend3 = 'Gagan';
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
 
 // METHOD - 1
 const friends = ['Michael', 'Steven', 'Peter'];
@@ -255,7 +255,177 @@ console.log(jonas);
 // "Jonas has 3 friends, and his best friend is called Michael"
 
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+
+
+// OBJECT METHODS //
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYear: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDriverLicense: false,
+
+//   calcAge: function(birthYear) {
+//     return 2037 - birthYear;
+//   }
+// };
+
+// calcAge: function() {
+//   // console.log(this);
+//       return 2037 - this.birthYear;
+//     }
+//   };
+
+calcAge: function() {
+  this.age = 2037 - this.birthYear;
+      return this.age;
+    },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} - year olf ${jonas.job}, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`
+  }
+}; 
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+
+// Challenge
+// "Jonas is a 46-year old teacher, and he has a driver's license"
+console.log(jonas.getSummary());
+
+
+
+
+
+// ITERATION_ THE FOR LOOP //
+
+
+// console.log('Lifting weights repetion 1');
+// console.log('Lifting weights repetion 2');
+// console.log('Lifting weights repetion 3');
+// console.log('Lifting weights repetion 4');
+// console.log('Lifting weights repetion 5');
+// console.log('Lifting weights repetion 6');
+// console.log('Lifting weights repetion 7');
+// console.log('Lifting weights repetion 8');
+// console.log('Lifting weights repetion 9');
+// console.log('Lifting weights repetion 10');
+
+// for loop keeps running while condition is true
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetion ${rep}`);
+}
+
+
+
+// LOOPING ARRAYS, BREAKING AND CONTINUING //
+
+const jonas = [
+  'Jonas',
+  'Schmedtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+  true
+];
+const types = [];
+
+for(let i = 0; i < jonas.length ; i++) {
+
+  // Reading from jonas array
+  console.log(jonas[i], typeof jonas[i]);
+
+  // Filling types array
+  // types[i] = typeof jonas [i];
+  types.push(typeof jonas[i]);
+}
+console.log(types);
+
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for(let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// Continue and Break statements
+console.log('--- ONLY STRINGS ---');
+for(let i = 0; i < jonas.length ; i++) {
+  if(typeof jonas[i] !== 'string') continue;
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log('--- BREAK WITH NUMBER ---');
+for(let i = 0; i < jonas.length ; i++) {
+  if(typeof jonas[i] == 'number') break;
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+
+// LOOPING BACKWARDS AND LOOPS IN LOOPS // 
+
+
+// Backwards
+
+const jonas = [
+  'Jonas',
+  'Schmedtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+  true
+];
+
+for(let i = jonas.length-1; i >= 0; i--) {
+  console.log(i, jonas[i]);
+}
+
+
+// Loop inside loop
+
+for(let exercise = 1; exercise < 4; exercise++) {
+  console.log(`----- Starting Exercise ${exercise}`);
+
+  for(let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weights repetition ${rep}`);
+  }
+}
 */
+
+
+
+// THE WHILE LOOP //
+
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetion ${rep}`);
+// }
+
+let rep = 1;
+while (rep<=10) {
+  // console.log(`Lifting weights repetion ${rep}`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while(dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if(dice === 6) 
+  console.log('Loop is about to end...');
+}
 
 
 
