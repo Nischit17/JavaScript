@@ -401,7 +401,7 @@ for(let exercise = 1; exercise < 4; exercise++) {
     console.log(`Exercise ${exercise}: Lifting weights repetition ${rep}`);
   }
 }
-*/
+
 
 
 
@@ -426,6 +426,9 @@ while(dice !== 6) {
   if(dice === 6) 
   console.log('Loop is about to end...');
 }
+*/
+
+
 
 
 
