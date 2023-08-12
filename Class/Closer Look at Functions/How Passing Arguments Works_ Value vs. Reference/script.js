@@ -30,3 +30,5 @@ const newPassport = function (person) {
 };
 newPassport(jonas);
 checkIn(flight, jonas);
+
+
